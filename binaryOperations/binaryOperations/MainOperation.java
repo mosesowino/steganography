@@ -1,10 +1,22 @@
 package binaryOperations;
+
 import java.io.*;
-// import java.util.Scanner;
+
+
+import FileOperations.Inputs.ParentFile;
+import FileOperations.Inputs.UserMessage;
+
 public class MainOperation{
     public static void main(String[] args) {
-        Convert con = new Convert();
-        con.fromBinary(null);
+
+        ParentFile pf = new ParentFile();
+        pf.ReadParentFile();
+
+
+        UserMessage um = new UserMessage();
+        um.ReadUserMessage();
+
+        // System.out.println("Parent => "+p+"\n User message => "+u);
     }
 }
 
@@ -12,7 +24,7 @@ public class MainOperation{
 class Convert{
     public void toBinary(File file){
         try{
-            File inputFile = new File("binaryOperations/spring.png");
+            File inputFile = new File("path");
             File outputFile = new File("file.bin");       
             
             //input stream to read bytes from the input file
